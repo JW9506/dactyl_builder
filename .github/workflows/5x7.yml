@@ -49,6 +49,7 @@ jobs:
       - name: clone BlueMicro_BLE repository
         if: ${{ steps.job_conditions.outputs.firmware-here == 'false' }}
         run: |
+          git config --global init.defaultBranch develop
           git clone https://github.com/JW9506/BlueMicro_BLE
       - name: setup job variables
         id: job_variables
