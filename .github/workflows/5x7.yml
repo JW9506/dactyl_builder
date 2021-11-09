@@ -77,7 +77,7 @@ jobs:
         run: |
           rm -r BlueMicro_BLE
       - name: check back in the changes to this repo
-        if: ${{ steps.job_conditions.outputs.firmware-here == 'false' }}
+        if: ${{ steps.job_conditions.outputs.firmware-here == 'true' }}
         run: |
           ls -l
           git config --global user.name 'gh-actions'
